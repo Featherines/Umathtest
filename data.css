@@ -1,1 +1,27 @@
+h1 + p {
+    color: red;
+}
+/*
+tag <p> ที่อยู่หลัง tag <h1> จะมีสีข้อความเป็นสีแดง
+เช่น
+<h1>Hello World</h1>
+<p>This will be red!</p>
+*/
+<style>
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"] + span {
+    cursor: pointer;
+}
+// span ที่อยู่หลัง checkbox จะมีสีแดงเมื่อ checkbox มีสถานะเป็น checked
+input[type="checkbox"]:checked + span {
+    color: red;
+}
+</style>
+...
+<label>
+    <input type="checkbox" name="1781090b400b4" value="G1">
+    <span>G1</span>
 
+</label>
