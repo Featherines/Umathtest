@@ -7,7 +7,46 @@ p {text-align: center;}
 </style>
     
                 <script type="text/javascript" src="https://bam.nr-data.net/1/31f1428de6?a=564273353&amp;v=1208.49599aa&amp;to=blVRYxRWWEpWVBdZC1cfcEIVQ1lUGFYRRA1aXFYYFV9ZThgd&amp;rst=38772&amp;ck=1&amp;ref=https://gamewith.jp/uma-musume/article/show/257928&amp;ap=182&amp;be=2828&amp;fe=37366&amp;dc=10154&amp;af=err,xhr,stn,ins,spa&amp;perf=%7B%22timing%22:%7B%22of%22:1618443191353,%22n%22:0,%22u%22:990,%22ue%22:1011,%22f%22:130,%22dn%22:199,%22dne%22:243,%22c%22:243,%22s%22:254,%22ce%22:497,%22rq%22:508,%22rp%22:813,%22rpe%22:2969,%22dl%22:2239,%22di%22:10147,%22ds%22:10154,%22de%22:12974,%22dc%22:37343,%22l%22:37347,%22le%22:37762%7D,%22navigation%22:%7B%22ty%22:1%7D%7D&amp;fp=3630&amp;fcp=3630&amp;at=QhJSFVxMS0Q%3D&amp;jsonp=NREUM.setToken"></script><script src="https://js-agent.newrelic.com/nr-spa-1208.min.js"></script><script src="https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101"></script><script type="text/javascript" src="//s.yjtag.jp/lib/aa1c1d641e590bfddb185b9989f07266bb95e91c.js?v=2"></script><script type="text/javascript" src="//yjtag.yahoo.co.jp/tag?site=GlANY5H&amp;referrer=https%3A%2F%2Fgamewith.jp%2Fuma-musume%2Farticle%2Fshow%2F257928%23&amp;docReferrer=https%3A%2F%2Fgamewith.jp%2Fuma-musume%2Farticle%2Fshow%2F257928&amp;H=2pjpokf"></script><script async="" src="//c.amazon-adsystem.com/aax2/apstag.js"></script><script async="" src="//s.yjtag.jp/tag.js#site=GlANY5H&amp;referrer=https%3A%2F%2Fgamewith.jp%2Fuma-musume%2Farticle%2Fshow%2F257928%23"></script><script type="text/javascript" async="" src="https://s.yimg.jp/images/listing/tool/cv/ytag.js"></script><script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/539Evs44yecoSf-lkJBQzKKj/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-zjc7xTV/N/5xk7fBfl7Yk+Q37duEHBt4X3RleHe4j+AH4qq5QE4gTkWU4vCAoECz"></script><script async="" src="//static.ads-twitter.com/uwt.js"></script><script src="https://connect.facebook.net/signals/config/268601257740948?v=2.9.39&amp;r=stable" async=""></script><script src="https://connect.facebook.net/signals/config/487629805469685?v=2.9.39&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://s.yimg.jp/images/listing/tool/cv/ytag.js"></script><script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-PHTF4DYVJD&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WSWFF9"></script><script>
-window.dataLayer = window.dataLayer || [];
+
+	window.onload= function(){
+        DisableEnableLinks(true)
+}
+function DisableEnableLinks(xHow){
+  objLinks = document.links;
+  for(i=0;i<objLinks.length;i++){
+    objLinks[i].disabled = xHow;
+    //link with onclick
+    if(objLinks[i].onclick && xHow){  
+        objLinks[i].onclick = 
+        new Function("return false;" + objLinks[i].onclick.toString().getFuncBody());
+    }
+    //link without onclick
+    else if(xHow){  
+      objLinks[i].onclick = function(){return false;}
+    }
+    //remove return false with link without onclick
+    else if
+    (!xHow && objLinks[i].onclick.toString().indexOf("function(){return false;}") != -1){            
+      objLinks[i].onclick = null;
+    }
+    //remove return false link with onclick
+    else if(!xHow && objLinks[i].onclick.toString().indexOf("return false;") != -1){  
+      strClick = objLinks[i].onclick.toString().getFuncBody().replace("return false;","")
+      objLinks[i].onclick = new Function(strClick);
+    }
+  }
+}
+String.prototype.getFuncBody = function(){ 
+  var str=this.toString(); 
+  str=str.replace(/[^{]+{/,"");
+  str=str.substring(0,str.length-1);   
+  str = str.replace(/\n/gi,"");
+  if(!str.match(/\(.*\)/gi))str += ")";
+  return str; 
+} 
+</script>
+	
+	window.dataLayer = window.dataLayer || [];
 dataLayer.push({
     gaProperty: "UA-44254420-3",
     ga4Property: "G-PHTF4DYVJD",
