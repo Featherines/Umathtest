@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-
+/* Style the Image Used to Trigger the Modal */
 #myImg {
   border-radius: 5px;
   cursor: pointer;
@@ -28,7 +22,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
-/* Modal Content (image) */
+/* Modal Content (Image) */
 .modal-content {
   margin: auto;
   display: block;
@@ -36,7 +30,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   max-width: 700px;
 }
 
-/* Caption of Modal Image */
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {
   margin: auto;
   display: block;
@@ -48,21 +42,14 @@ body {font-family: Arial, Helvetica, sans-serif;}
   height: 150px;
 }
 
-/* Add Animation */
-.modal-content, #caption {  
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
   animation-name: zoom;
   animation-duration: 0.6s;
 }
 
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
-}
-
 @keyframes zoom {
-  from {transform:scale(0)} 
+  from {transform:scale(0)}
   to {transform:scale(1)}
 }
 
@@ -90,5 +77,3 @@ body {font-family: Arial, Helvetica, sans-serif;}
     width: 100%;
   }
 }
-</style>
-</head>
